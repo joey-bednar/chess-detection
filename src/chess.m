@@ -2,7 +2,7 @@ clear
 clc
 
 % load board image
-img=imread('../img/cas1.png');
+img=imread('img/cas1.png');
 
 % get individual images of squares
 squares=getSquares(img);
