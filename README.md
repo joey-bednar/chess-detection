@@ -18,7 +18,7 @@ The edges caused by the squares are separated from the edges caused by the piece
 
 The original image of the board can be separated into 64 squares using the coordinates of the lines. These individual images are used to perform piece detection.
 
-<img src="https://github.com/joey-bednar/chess-detection/blob/main/img/king.jpg?raw=true"  width="200" height="200">
+<img src="https://github.com/joey-bednar/chess-detection/blob/main/img/king.jpg?raw=true"  width="100" height="100">
 
 <!--
 ## Detecting Pieces
