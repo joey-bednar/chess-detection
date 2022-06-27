@@ -6,9 +6,7 @@ function Squares=getSquares(img)
     board = padarray(img,[1 1],0,'both');
 
     grayBoard = rgb2gray(board); % converts to grayscale
-    %grayBoard = imresize(grayBoard, [400, 400]);
     cannyEdges = edge(grayBoard, 'canny'); % Uses canny edge detection to identify the cells
-    %figure,imshow(grayBoard,[]), hold on % displays the image
 
     [H, theta, rho] = hough(cannyEdges); % Uses hough transform to 
 
@@ -25,7 +23,6 @@ function Squares=getSquares(img)
         points(k, 1) = lines(k).point1(1);
         points(k, 2) = lines(k).point1(2);
         points(k, 3) = lines(k).theta;
-        % plot(xy(:,1), xy(:,2), 'LineWidth', 3, 'Color', 'r')
     end
     
     % hold off
