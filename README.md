@@ -4,7 +4,7 @@ A 2D image of a chessboard is input to the MATLAB program. The locations of the 
 ## Detecting Squares
 The input to the program is an image of a 2D chessboard. These are obtained as screenshots from chess.com or lichess.org. These can be boards with any background color, piece theme, or size.
 
-![2D chess board image](https://github.com/joey-bednar/chess-detection/blob/main/img/c1.jpg?raw=true)
+![2D chess board image](https://github.com/joey-bednar/chess-detection/blob/main/img/c1.png?raw=true)
 
 The image is split into individual squares by performing Canny edge detection on the grayscale image. This returns a binary image with 1s at the edges.
 
@@ -17,11 +17,12 @@ The edges caused by the squares are separated from the edges caused by the piece
 The original image of the board can be separated into 64 squares using the coordinates of the lines. These individual images are used to perform piece detection.
 
 ![White king](https://github.com/joey-bednar/chess-detection/blob/main/img/king.jpg?raw=true)
+<!--
+## Detecting Pieces
 
-//## Detecting Pieces
+## Detecting Previous Move
 
-//## Detecting Previous Move
+## Calculating Best Move
 
-//## Calculating Best Move
-
-//## Examples
+## Examples
+-->
