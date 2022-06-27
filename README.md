@@ -20,12 +20,36 @@ The original image of the board can be separated into 64 squares using the coord
 
 <img src="https://github.com/joey-bednar/chess-detection/blob/main/img/king.jpg?raw=true"  width="100" height="100">
 
-<!--
 ## Detecting Pieces
+Piece shapes are detected by computing a histogram of the grayscale image of each square. The peak of the histogram is the background color which is filtered out. Only one peak indicates that the square is empty.
+
+<img src="https://github.com/joey-bednar/chess-detection/blob/main/img/hist_piece.jpg?raw=true"  width="400" height="400">
+
+The square image is converted into a binary image. The peak value in the histogram is 0 and all other values are 1. Any gaps in the shape are filled in with 1s.
+
+<img src="https://github.com/joey-bednar/chess-detection/blob/main/img/king_outline.jpg?raw=true"  width="100" height="100">
+
+The outline is used to match the piece on the square to one of the known piece shapes. These are given in templates.mat.
+
+<img src="https://github.com/joey-bednar/chess-detection/blob/main/img/shapes.jpg?raw=true"  width="504" height="131">
+
+A normalized 2D cross-correlation between the piece and the templates is performed to find the best match. Next, the color of the piece is calculated using a histogram of the grayscale square image. The background color (peak) is removed.
+
+<img src="https://github.com/joey-bednar/chess-detection/blob/main/img/hist_color.jpg?raw=true"  width="400" height="400">
+
+The ratio of light pixels to dark pixels is used to determine the piece color. 
 
 ## Detecting Previous Move
+The previous move is often displayed by highlighting the initial and final square of the piece that moved. The background of these highlighted squares is used to determine whose turn it is in the position and if capturing en passant is possible.
+
+<img src="https://github.com/joey-bednar/chess-detection/blob/main/img/en1.png?raw=true"  width="400" height="400">
+
+The highlighted squares are computed using a histogram of the background of all of the squares on the board. The top two peaks are colors of the light and dark squares. The third peak is the background color of the highlighted squares. If no highlighted squares are found, it is assumed to be white's turn.
+
+<img src="https://github.com/joey-bednar/chess-detection/blob/main/img/hist_previous.jpg?raw=true"  width="400" height="400">
+
+The initial square will not have a piece on it. The final square will have a piece. It will be the opposite player's turn. En passant is legal if a pawn has moved two squares.
 
 ## Calculating Best Move
 
-## Examples
--->
+
