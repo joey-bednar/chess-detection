@@ -1,10 +1,12 @@
 # Chessboard Detection with MATLAB
 A 2D image of a chessboard is input to the MATLAB program. The locations of the pieces are detected using image processing techniques and translated into FEN. The resulting position in the FEN is analysed using Stockfish, an open-source chess engine, and the optimal move is calculated. The suggested move is shown by adding an arrow to the original image.
 
+<img src="https://github.com/joey-bednar/chess-detection/blob/main/img/out1.png?raw=true"  width="200" height="200">&nbsp;<img src="https://github.com/joey-bednar/chess-detection/blob/main/img/out2.png?raw=true"  width="200" height="200">&nbsp;<img src="https://github.com/joey-bednar/chess-detection/blob/main/img/out3.png?raw=true"  width="200" height="200">
+
 ## Detecting Squares
 The input to the program is an image of a 2D chessboard. These are obtained as screenshots from chess.com or lichess.org. These can be boards with any background color, piece theme, or size.
 
-<img src="https://github.com/joey-bednar/chess-detection/blob/main/img/c1.png?raw=true"  width="200" height="200"><img src="https://github.com/joey-bednar/chess-detection/blob/main/img/l1.png?raw=true"  width="200" height="200"><img src="https://github.com/joey-bednar/chess-detection/blob/main/img/l2.png?raw=true"  width="200" height="200">
+<img src="https://github.com/joey-bednar/chess-detection/blob/main/img/c1.png?raw=true"  width="200" height="200">&nbsp;<img src="https://github.com/joey-bednar/chess-detection/blob/main/img/l1.png?raw=true"  width="200" height="200">&nbsp;<img src="https://github.com/joey-bednar/chess-detection/blob/main/img/l2.png?raw=true"  width="200" height="200">
 
 The image is split into individual squares by performing Canny edge detection on the grayscale image. This returns a binary image with 1s at the edges.
 
