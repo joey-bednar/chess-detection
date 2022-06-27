@@ -53,7 +53,7 @@ The initial square will not have a piece on it. The final square will have a pie
 ## Calculating Best Move
 The array of square images are converted into an 8x8 array of chars corresponding to the piece on each square. The label for each piece corresponds to the naming conventions used in FEN.
 
-<img src="https://github.com/joey-bednar/chess-detection/blob/main/img/c1.png?raw=true"  width="200" height="200">&nbsp;<img src="https://github.com/joey-bednar/chess-detection/blob/main/img/chars.png?raw=true"  width="138" height="240">
+<img src="https://github.com/joey-bednar/chess-detection/blob/main/img/c1.png?raw=true"  width="200" height="200">&nbsp;<img src="https://github.com/joey-bednar/chess-detection/blob/main/img/chars.png?raw=true"  width="115" height="200">
 
 This array is converted into FEN. Castling rights are assumed if the rooks and king are in their original locations.
 
